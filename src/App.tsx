@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <h1>Hello, firebase world! Now Hosted?</h1>
+      <h1 className="text-3xl font-bold underline">Hello, firebase world! Now Hosted?</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
