@@ -1,17 +1,17 @@
 import { useState } from 'react'
 import './App.css'
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, RangeCalendar} from "@nextui-org/react";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, RangeCalendar, CheckboxGroup, Checkbox, Autocomplete, AutocompleteItem} from "@nextui-org/react";
 import {today, getLocalTimeZone} from '@internationalized/date';
+import {products} from "./data.ts";
+
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
     <Navbar>
       <NavbarBrand>
-        {/* <AcmeLogo /> */}
+        {/* <img src={`/logo.jpeg`} alt={'snip it logo'} /> */}
         <p className="font-bold text-inherit">SnipIT</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
@@ -42,13 +42,16 @@ function App() {
         </NavbarItem>
       </NavbarContent>
     </Navbar>
-      <h1 className="text-3xl font-bold underline">Current Offers</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-      <div className="flex gap-x-4">
+      <h1 className="text-3xl font-bold underline mb-3">Current Offers</h1>
+      <div className="offer-card flex gap-x-4">
+      <Autocomplete
+      defaultItems={products}
+      label="Product"
+      placeholder="Search a product"
+      className="max-w-xs"
+    >
+      {(product) => <AutocompleteItem key={product.value}>{product.label}</AutocompleteItem>}
+    </Autocomplete>
       <RangeCalendar
         aria-label="Date (Uncontrolled)"
         defaultValue={{
@@ -56,8 +59,18 @@ function App() {
           end: today(getLocalTimeZone()).add({weeks: 1}),
         }}
       />
+      <CheckboxGroup
+      label="Select Regions"
+      defaultValue={["north-america", "europe"]}
+      >
+      <Checkbox value="north-america">North America</Checkbox>
+      <Checkbox value="south-america">South America</Checkbox>
+      <Checkbox value="europe">Europe</Checkbox>
+      <Checkbox value="asia">Asia</Checkbox>
+      <Checkbox value="africa">Africa</Checkbox>
+      <Checkbox value="australia">Australia</Checkbox>
+    </CheckboxGroup>
     </div>
-
     </>
   )
 }
