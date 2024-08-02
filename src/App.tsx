@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, RangeCalendar, CheckboxGroup, Checkbox, Autocomplete, AutocompleteItem} from "@nextui-org/react";
 import {today, getLocalTimeZone} from '@internationalized/date';
