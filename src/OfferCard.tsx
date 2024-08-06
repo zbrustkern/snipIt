@@ -24,6 +24,14 @@ function App() {
         >
             {(product) => <AutocompleteItem key={product.value}>{product.label}</AutocompleteItem>}
         </Autocomplete>
+        <Slider 
+        label="Dollar Value" 
+        step={0.01} 
+        maxValue={1} 
+        minValue={0} 
+        defaultValue={0.25}
+        className="max-w-md"
+        />
     </CardHeader>
     <Divider/>
     <CardBody>
@@ -59,14 +67,6 @@ function App() {
         <Switch defaultSelected>
             Active
         </Switch>
-        <Slider 
-        label="Percent Off" 
-        step={0.01} 
-        maxValue={1} 
-        minValue={0} 
-        defaultValue={0.25}
-        className="max-w-md"
-        />
       </div>
     </div>
     </CardBody>
