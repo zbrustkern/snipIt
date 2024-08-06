@@ -7,6 +7,7 @@ function App() {
     <>
     <Navbar>
       <NavbarBrand>
+        <img src="./logo.jpeg" className="w-1/6 mr-4"/>
         <p className="font-bold text-inherit">SnipIT</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
