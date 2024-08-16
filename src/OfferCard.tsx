@@ -3,7 +3,7 @@ import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Slider, Switch} f
 import {today, getLocalTimeZone} from '@internationalized/date';
 import {products, sizes} from "./data.ts";
 
-function App() {
+function OfferCard() {
   return (
     <>
     <Card className="mb-4">
@@ -85,4 +85,4 @@ function App() {
   )
 }
 
-export default App
+export default OfferCard
