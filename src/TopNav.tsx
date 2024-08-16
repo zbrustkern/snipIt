@@ -5,22 +5,22 @@ export default function TopNav() {
         <Navbar>
           <NavbarBrand>
             <img src="./logo.jpeg" className="w-1/6 mr-4"/>
-            <p className="font-bold text-inherit">SnipIT</p>
+            <p className="font-bold text-inherit">notZeke</p>
           </NavbarBrand>
           <NavbarContent className="hidden sm:flex gap-4" justify="center">
             <NavbarItem>
               <Link color="foreground" href="#">
-                Products
+                Financial Planning
               </Link>
             </NavbarItem>
             <NavbarItem isActive>
               <Link href="#" aria-current="page">
-                Offers
+                Coupon Planning
               </Link>
             </NavbarItem>
             <NavbarItem>
               <Link color="foreground" href="#">
-                Stores
+                Health Planning
               </Link>
             </NavbarItem>
           </NavbarContent>
