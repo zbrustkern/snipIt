@@ -12,7 +12,7 @@ function App() {
       <h1 className="text-3xl font-bold underline mb-3">Current Offers</h1>
       <OfferCard />
       <OfferCard />
-      <OfferCard />
+      <h1 className="text-3xl font-bold underline mb-3">Physical Preparedness</h1>
       </>
   )
 }
