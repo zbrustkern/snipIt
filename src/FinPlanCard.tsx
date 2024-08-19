@@ -14,9 +14,9 @@ export default function FindPlanCard() {
     }
 
     const [formData, setFormData] = useState(newForm)
-    const handleChange = (evt) => {
+    const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
         if ((evt.target.name === "raise") || (evt.target.name === "saveRate") || (evt.target.name === "taxRate") || (evt.target.name === "return")) {
-            setFormData({...formData, [evt.target.name]: evt.target.value * .01 })
+            setFormData({...formData, [evt.target.name]: parseFloat(evt.target.value) * 0.01 })
         }
         else {
         setFormData({...formData, [evt.target.name]: evt.target.value })
